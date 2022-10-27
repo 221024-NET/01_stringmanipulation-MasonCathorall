@@ -19,7 +19,29 @@ namespace StringManipulationChallenge
             //
             //
 
+            Console.WriteLine("Please enter your message and press enter");
+            userInputString = Console.ReadLine();
 
+            Console.WriteLine("Please enter a number LESS THAN the length of your string and press enter");
+            elementNum = int.Parse(Console.ReadLine());
+
+            while(elementNum >= userInputString.Length){
+                Console.WriteLine("The number entered was not less than the length of the string entered.\nPlease try again!");
+                Console.WriteLine("Please enter a number LESS THAN the length of your string and press enter");
+                elementNum = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("For which character should I search in your original message?");
+            char1 = Console.ReadLine()[0];
+
+            Console.WriteLine(SearchChar(userInputString, char1));
+
+            Console.WriteLine("What is your first name?");
+            fName = Console.ReadLine();
+            Console.WriteLine("What is your last name?");
+            lName = Console.ReadLine();
+
+            userFullName = ConcatNames(fName, lName);
         }
 
         // This method has one string parameter. 
@@ -28,6 +50,8 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.
         public static string StringToUpper(string x){
+            Console.WriteLine(x.ToUpper());
+            return x.ToUpper();
             throw new NotImplementedException("StringToUpper method not implemented.");
         }
 
@@ -37,6 +61,8 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.        
         public static string StringToLower(string x){
+            Console.WriteLine(x.ToLower());
+            return x.ToLower();
             throw new NotImplementedException("StringToUpper method not implemented.");
 
         }
@@ -47,6 +73,8 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.
         public static string StringTrim(string x){
+            Console.WriteLine(x.Trim());
+            return x.Trim();
             throw new NotImplementedException("StringTrim method not implemented.");
 
         }
@@ -57,6 +85,8 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.
         public static string StringSubstring(string x, int elementNum){
+            Console.WriteLine(x.Substring(elementNum));
+            return x.Substring(elementNum);
             throw new NotImplementedException("StringSubstring method not implemented.");
 
         }
@@ -66,6 +96,8 @@ namespace StringManipulationChallenge
         // 1) search the string parameter for the char parameter
         // 2) return the index of the char.
         public static int SearchChar(string userInputString, char x){
+            Console.WriteLine(userInputString.IndexOf(x));
+            return userInputString.IndexOf(x);
             throw new NotImplementedException("SearchChar method not implemented.");
         }
 
@@ -74,6 +106,8 @@ namespace StringManipulationChallenge
         // 1) concatenate the two strings with a space between them.
         // 2) return the new string.
         public static string ConcatNames(string fName, string lName){
+            Console.WriteLine(fName + " " + lName);
+            return fName + " " + lName;
             throw new NotImplementedException("ConcatNames method not implemented.");
         }
 
