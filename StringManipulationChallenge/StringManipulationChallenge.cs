@@ -19,7 +19,29 @@ namespace StringManipulationChallenge
             //
             //
 
+            Console.WriteLine("Please enter your message and press enter");
+            userInputString = Console.ReadLine();
 
+            Console.WriteLine("Please enter a number LESS THAN the length of your string and press enter");
+            elementNum = int.Parse(Console.ReadLine());
+
+            while(elementNum >= userInputString.Length){
+                Console.WriteLine("The number entered was not less than the length of the string entered.\nPlease try again!");
+                Console.WriteLine("Please enter a number LESS THAN the length of your string and press enter");
+                elementNum = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("For which character should I search in your original message?");
+            char1 = Console.ReadLine()[0];
+
+            Console.WriteLine(SearchChar(userInputString, char1));
+
+            Console.WriteLine("What is your first name?");
+            fName = Console.ReadLine();
+            Console.WriteLine("What is your last name?");
+            lName = Console.ReadLine();
+
+            userFullName = ConcatNames(fName, lName);
         }
 
         // This method has one string parameter. 
